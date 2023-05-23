@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.kehila-manager-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .button{
+        color: gray;
+        border: 1px solid gray;
+    }
+    
+    h4{
+        //margin-top: 60px;
+    }
+    
+    .amuta-container{
+        display: flex;
+        justify-content: center;
+       //gap: 20px;
+    
+        .amuta{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+    
+      
+    }
+    
+    .kehila-container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    
+        .kehila{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+    }
+}
+
+
+

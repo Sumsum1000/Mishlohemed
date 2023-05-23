@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.itemdisplay-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
+
+
+    .items-container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    
+        .item{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        img{
+            border-radius: 50%;
+            box-shadow: 1px 1px 10px 1px rgba($color: rgb(177, 177, 177), $alpha: 1.0);
+        }
+        
+    }
+}
+
+.logo{
+    border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+

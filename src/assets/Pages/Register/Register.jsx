@@ -1,14 +1,13 @@
-import { Box, Button, Container, FilledInput } from "@mui/material";
+import { Box, Container, FilledInput } from "@mui/material";
 // import style from "./Register.module.scss";
 import { useNavigate } from "react-router-dom";
-import { TextField } from "@mui/material";
+//import { TextField } from "@mui/material";
 import { BasicButton } from "../Routing/Routing";
 
 export const Register = () => {
   const nevigate = useNavigate();
   const clickHandler = () => {
-    nevigate("/createAmuta");
-    console.log("fgredhrtgh");
+    nevigate("/manager");
   };
 
   return (

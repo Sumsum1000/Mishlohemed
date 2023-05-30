@@ -1,11 +1,17 @@
-import React from "react";
-import style from "./AmutaManager.module.scss";
+//import React from "react";
+//import style from "./AmutaManager.module.scss";
 import { ItemsDisplay } from "../ItemsDisplay/ItemsDisplay";
-import { Button, Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import logo1 from "../../Graphics/DemoLogo.jpg";
 import { BasicButton } from "../../Pages/Routing/Routing";
+import { useNavigate } from "react-router-dom";
 
 export const AmutaManager = () => {
+  const nevigate = useNavigate();
+  const createAmutaHandler = () => {
+    nevigate("/createAmuta");
+  };
+
   return (
     <Container>
       {/* <div>
@@ -29,7 +35,9 @@ export const AmutaManager = () => {
       {/* <Button variant="contained" size="large" sx={{ padding: 5 }}>
         צור עמותה חדשה
       </Button> */}
-      <BasicButton variant="contained">צור עמותה חדשה</BasicButton>
+      <BasicButton onClick={createAmutaHandler} variant="contained">
+        צור עמותה חדשה
+      </BasicButton>
     </Container>
   );
 };

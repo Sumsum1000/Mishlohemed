@@ -4,10 +4,11 @@ import { Welcome } from "../../Components/Welcome/Welcome";
 import { AmutaManager } from "../../Components/AmutaManager/AmutaManager";
 import { Login } from "../login/Login";
 import { Register } from "../Register/Register";
-import { CreateAmuta } from "../../Components/CreateAmuta";
+import { CreateAmuta } from "../../Components/CreateAmuta/CreateAmuta";
 import { Button, createTheme, ThemeProvider } from "@mui/material";
 import { green, cyan, lime, grey, red, yellow } from "@mui/material/colors";
 import styled from "@emotion/styled";
+import { Amuta } from "../../Components/Amuta/Amuta";
 
 export const BasicButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -33,7 +34,7 @@ const theme = createTheme({
           flexDirection: "column",
           justifyContent: "space-between",
           width: "90vw",
-          height: "70vh",
+          height: "80vh",
           gap: "10px",
           p: 1,
           m: 1,
@@ -90,6 +91,7 @@ export const Routing = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/manager" element={<AmutaManager />} />
           <Route path="/createAmuta" element={<CreateAmuta />} />
+          <Route path="/amuta" element={<Amuta />} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -1,54 +1,29 @@
-
-import { Button } from '@mui/material';
-import style from './Register.module.scss';
-import { useNavigate } from 'react-router-dom';
-import {TextField} from '@mui/material';
-
-
+import { Box, Button, Container, FilledInput } from "@mui/material";
+// import style from "./Register.module.scss";
+import { useNavigate } from "react-router-dom";
+import { TextField } from "@mui/material";
+import { BasicButton } from "../Routing/Routing";
 
 export const Register = () => {
-
-    const nevigate = useNavigate();
-    const clickHandler = () => {
-        nevigate("/createAmuta")
-        console.log('fgredhrtgh')
-      }
+  const nevigate = useNavigate();
+  const clickHandler = () => {
+    nevigate("/createAmuta");
+    console.log("fgredhrtgh");
+  };
 
   return (
+    <form>
+      <Container>
+        <Box>
+          <FilledInput type="text" placeholder="שם" variant="outlined" />
+          <FilledInput type="text" placeholder="סיסמה" variant="outlined" />
+          <FilledInput type="email" placeholder="מייל" variant="outlined" />
+        </Box>
 
-
-<form>
-<TextField
-  style={{ width: "250px", margin: "5px" }}
-  type="text"
-  label="Name"
-  variant="outlined"
-/>
-<br />
-<TextField
-  style={{ width: "250px", margin: "5px" }}
-  type="text"
-  label="password"
-  variant="outlined"
-/>
-<br />
-<TextField
-  style={{ width: "250px", margin: "5px" }}
-  type="email"
-  label="email"
-  variant="outlined"
-/>
-<br />
-{/* <p>Choose logo</p>
-<TextField
-  style={{ width: "250px", margin: "5px" }}
-  type="file"
-  variant="outlined"
-/>
-<br /> */}
-<Button onClick={clickHandler} variant="contained" color="primary">
-  Register
-</Button>
-</form>
-  )
-}
+        <BasicButton onClick={clickHandler} variant="contained">
+          צור חשבון
+        </BasicButton>
+      </Container>
+    </form>
+  );
+};
